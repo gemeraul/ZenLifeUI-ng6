@@ -1,0 +1,41 @@
+.title-option {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    cursor: default;
+}
+
+mat-grid-tile {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #484444;
+}
+
+.square_board{
+    margin: 10px;
+    width: 100%;
+}
+
+.test {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 1em !important;
+}
+
+.avatar-icon {
+    font-size: 8em;
+    cursor: pointer;
+}
+
+.imageTile {
+    /*text-align: center;*/
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+  height: 130px;
+  width: 130px;
+  position: relative;
+  margin: 0 auto;
+}

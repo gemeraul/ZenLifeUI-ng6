@@ -1,0 +1,41 @@
+<nav class="navbar is-blue">
+  <!-- logo -->
+  <div class="navbar-brand">
+    <a class="navbar-item" [ngClass]="{'is-wide': !active}">
+      <img src="assets/img/angular-logo.png">
+    </a>
+    <a role="button" class="navbar-burger" [ngClass]="{'is-active': active}" aria-label="menu" aria-expanded="false" (click)="activateMenu()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu" [ngClass]="{'is-active': active}">
+    <div class="navbar-start">
+      <a routerLink="" class="navbar-item" [ngClass]="{'is-wide': !active}">Analyze Speech</a>
+      <a routerLink="" class="navbar-item" [ngClass]="{'is-wide': !active}">What is this?</a>
+    </div>
+
+    <div class="navbar-end ">
+      <span class="navbar-item" [ngClass]="{'right-separation': !active}">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="button is-light-blue" data-social-network="Twitter" data-social-action="tweet" >
+              <span class="icon">
+                <i class="fa fa-twitter"></i>
+              </span>
+            </a>
+          </p>
+          
+          <p class="control">
+            <a class="button is-link">
+              <span class="icon">
+                <i class="fa fa-linkedin"></i>
+              </span>
+            </a>
+          </p>
+        </div>
+      </span>
+    </div>
+  </div>
+</nav>

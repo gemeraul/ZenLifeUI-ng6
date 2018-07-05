@@ -1,0 +1,15 @@
+.square_board {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    min-width: 550px;
+    min-height: 380px;
+}
+
+.test {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 1em !important;
+}

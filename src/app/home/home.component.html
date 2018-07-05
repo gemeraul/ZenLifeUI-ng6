@@ -1,0 +1,84 @@
+<section class="hero top-banner">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title title-main">Zen Life, a very cool app :)</h1>
+          
+          <mat-icon class="icon-quote">keyboard_arrow_down</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero ">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered small-title-option">
+        <div class="column has-text-centered small-title-option">
+          Analyze speech !
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column has-text-centered title-option">
+          Click the icon to start talking:
+        </div>
+      </div>
+      <div class="columns">
+        <!-- this boxes wil be a component in future -->
+        <div class="column is-one-third"></div>
+        <div class="column is-one-third optionBox">
+          <i class="fa fa-microphone big-icon" (click)="speak()"></i>
+          <h2 class="option-title ux">Sentiment Analysis</h2>
+          <div class="columns is-centered">
+            <mat-progress-spinner
+              *ngIf="showSpinner"
+              class="spinner"
+              [color]="color"
+              [mode]="mode"
+              [value]="value">
+            </mat-progress-spinner>
+          </div>
+          
+          <p *ngIf="!showSpinner">Custom reports tailored to improve your daily conversations.</p>
+          <div class="info-separation">
+            
+            <button mat-raised-button (click)="speak()" *ngIf="!showSpinner" color="primary" class="view-info">Push to talk</button>
+          </div>
+        </div>
+        <div class="column is-one-third"></div>
+      </div>
+
+    </div>
+  </div>
+  <!-- this banner wil be a component in future -->
+  <!--<div class="skills hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title title-exp">Experienced and Skilled engineers</h1>
+            <h1 class="subtitle title-exp">at your service.</h1>
+            <div class="columns is-centered">
+              <div class="column has-text-centered text-p is-one-third">
+                <p>Our team is comprised of young developers with passion for quality prodcuts. We'be built enterprise level
+                  applications for companies with over 100,000 employees with performance and coding standards that have
+                  recieved awards within the company. </p>
+              </div>
+              <i class="fa fa-trophy award-icon"></i>
+              <div class="column has-text-centered text-p is-one-third">
+                <p> We can help your company design and build a digital product that will make your brand stand out amongst the
+                  best. When you work with us, there is a guarantee that your product will be delivered with modern technologies
+                  that unlock your full potential.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="columns is-centered button-separation">
+          <button mat-raised-button color="accent" class="">Who are we?</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+</section>

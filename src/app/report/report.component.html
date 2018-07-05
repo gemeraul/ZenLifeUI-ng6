@@ -1,0 +1,32 @@
+<section class="hero top-banner">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="columns is-centered">
+        <div class="column title-option">
+          Central Dashboard :
+        </div>
+      </div>
+      <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+
+          <mat-card class="square_board" *ngIf="tile.text || tile.isImage">
+            <!-- We need to separate this into its own tile-component for example, to be able to have a class that we pass parameters and it builds the card inside the tile -->
+            <mat-card-content>
+              <h2 *ngIf="tile.title" class="test">{{tile.title}}</h2>
+              <div *ngIf="tile.text" [innerHTML]="tile.text">
+              </div>
+              <div *ngIf="tile.isImage" class="imageTile">
+                <div mat-card-avatar class="example-header-image"></div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <app-user-info-card *ngIf="tile.isInfo" [type]="tile.type"></app-user-info-card>
+          <app-chart-card *ngIf="tile.isChart" [chartData]="sentimentResponse"></app-chart-card>
+          <app-bar-card *ngIf="tile.isBar"></app-bar-card>
+
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</section>

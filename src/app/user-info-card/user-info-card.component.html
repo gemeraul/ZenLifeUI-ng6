@@ -1,0 +1,46 @@
+<mat-card class="" [ngClass]="{'totalScore': type == 'totalScore', 'userInfo': type == 'userInfo', 'line': type == 'line', 'intent': type == 'intent' }">
+  <!-- We need to separate this into its own tile-component for example, to be able to have a class that we pass parameters and it builds the card inside the tile -->
+  <mat-card-content>
+    <!-- User Info -->
+    <div *ngIf="type=='userInfo'">
+       <h2  class="infoTitle">{{textDisplayed}}</h2>
+    </div>
+
+    <!-- Total Score -->
+    <div *ngIf="type=='totalScore'" class="columns is-centered">
+      <h2  class="cardTitle">{{textDisplayed}}</h2>
+    </div>
+    <div *ngIf="type=='totalScore'" class="columns is-centered">
+      <p>Positive - 78%</p>
+    </div>
+
+    <!-- Intent -->
+    <div *ngIf="type=='intent'" class="columns is-centered">
+      <h2  class="cardTitle">{{textDisplayed}}</h2>
+    </div>
+    <div *ngIf="type=='intent'" class="columns is-centered">
+      <p>Suggestion (97%)</p>
+    </div>
+
+    <!-- Line -->
+    <div *ngIf="type=='line'" class="columns is-centered">
+      <h2  class="cardTitle">Analysis at - {{timeAt}}</h2>
+    </div>
+    <div *ngIf="type=='line'" class="columns is-centered">
+      <mat-slider
+          class="example-margin"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [thumbLabel]="thumbLabel"
+          [displayWith]="formatLabel"
+          [tickInterval]="tickInterval"
+          [(ngModel)]="value"
+          (change)="formatTime(value)"
+          [invert]="invert"
+          [vertical]="vertical">
+      </mat-slider>
+    </div>
+    
+  </mat-card-content>
+</mat-card>

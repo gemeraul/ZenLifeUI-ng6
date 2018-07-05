@@ -1,0 +1,47 @@
+.userInfo {
+    /*margin: 10px;*/
+    width: 100%;
+    min-width: 840px;
+}
+
+.totalScore {
+    width: 100%;
+    min-width: 260px;
+    min-height: 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.line {
+    width: 100%;
+    min-width: 260px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    max-height: 80px;
+}
+
+.intent {
+    width: 100%;
+    min-width: 260px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 80px;
+}
+
+.mat-slider-horizontal {
+    width: 215px;
+    
+}
+
+.cardTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.infoTitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.3em;
+}
